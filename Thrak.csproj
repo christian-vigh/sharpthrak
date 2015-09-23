@@ -1,0 +1,1085 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF0F1D8C-6A59-4CD4-99EB-22BA3B7BB150}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Thrak</RootNamespace>
+    <AssemblyName>Thrak</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\64\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\32\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Localization\Classes\CircularBuffer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CircularBuffer.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\CircularBuffer.en.Designer.cs">
+      <DependentUpon>CircularBuffer.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\CircularBuffer.fr.Designer.cs">
+      <DependentUpon>CircularBuffer.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Hotkey.fr.Designer.cs">
+      <DependentUpon>Hotkey.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Hotkey.en.Designer.cs">
+      <DependentUpon>Hotkey.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Hotkey.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hotkey.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Set.fr.Designer.cs">
+      <DependentUpon>Set.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Set.en.Designer.cs">
+      <DependentUpon>Set.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Enumerator.fr.Designer.cs">
+      <DependentUpon>Enumerator.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Enumerator.en.Designer.cs">
+      <DependentUpon>Enumerator.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Enumerator.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enumerator.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Set.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Set.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Exceptions.fr.Designer.cs">
+      <DependentUpon>Exceptions.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Exceptions.en.Designer.cs">
+      <DependentUpon>Exceptions.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Exceptions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exceptions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Forms\HistoryForm.fr.Designer.cs">
+      <DependentUpon>HistoryForm.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Forms\HistoryForm.en.Designer.cs">
+      <DependentUpon>HistoryForm.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Forms\HistoryForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HistoryForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Processors\CommandLine\CommandLine.cs" />
+    <Compile Include="Sources\Controls\ConsoleTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sources\Controls\ConsoleTextBox.Designer.cs">
+      <DependentUpon>ConsoleTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Controls\HotkeyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sources\Controls\HotkeyTextBox.Designer.cs">
+      <DependentUpon>HotkeyTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Controls\TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sources\Controls\TextBox.Designer.cs">
+      <DependentUpon>TextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Forms\Classes\History.cs" />
+    <Compile Include="Sources\Forms\Classes\Prompt.cs" />
+    <Compile Include="Sources\Forms\Design\ColorPair.cs" />
+    <Compile Include="Sources\Forms\Design\FixedPitchFontEditor.cs" />
+    <Compile Include="Sources\Forms\Classes\ShellFormClasses.cs" />
+    <Compile Include="Sources\Forms\ShellForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sources\Forms\ShellForm.Designer.cs">
+      <DependentUpon>ShellForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Forms\SubForms\HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sources\Forms\SubForms\HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Graphics\GDI.cs" />
+    <Compile Include="Sources\Input\Hotkey.cs" />
+    <Compile Include="Sources\Input\HotkeySequence.cs" />
+    <Compile Include="Sources\Input\Shortcut.cs" />
+    <Compile Include="Sources\Input\Shortcuts.cs" />
+    <Compile Include="Sources\Interop\MSVCRT.cs" />
+    <Compile Include="Sources\Math\BigInteger\BigInteger.cs" />
+    <Compile Include="Sources\Math\BigInteger\Constructors.cs" />
+    <Compile Include="Sources\Math\BitTables.cs" />
+    <Compile Include="Sources\Structures\BitArray.cs" />
+    <Compile Include="Sources\Interop\Vroom.cs" />
+    <Compile Include="Sources\Forms\ApplicationSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sources\Forms\ApplicationSettingsForm.designer.cs">
+      <DependentUpon>ApplicationSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Forms\Classes\FormSettings.cs" />
+    <Compile Include="Sources\Core\Measurement.cs" />
+    <Compile Include="Sources\Structures\CircularBuffer.cs" />
+    <Compile Include="Sources\Structures\Range.cs" />
+    <Compile Include="Sources\Structures\Set.cs" />
+    <Compile Include="Sources\Structures\ISet.cs" />
+    <Compile Include="Sources\Structures\Stack.cs" />
+    <Compile Include="Sources\Structures\Structure.cs" />
+    <Compile Include="Sources\Forms\AsynchronousForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sources\Forms\AsynchronousForm.Designer.cs">
+      <DependentUpon>AsynchronousForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Forms\Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sources\Forms\Form.Designer.cs">
+      <DependentUpon>Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Forms\SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sources\Forms\SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="Sources\Math\Constants.cs" />
+    <Compile Include="Sources\Math\Conversion.cs" />
+    <Compile Include="Sources\Math\Expression.cs" />
+    <Compile Include="Sources\Math\Math.cs" />
+    <Compile Include="Resources\Localization\Classes\BitStructure.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BitStructure.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\BitStructure.en.Designer.cs">
+      <DependentUpon>BitStructure.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\BitStructure.fr.Designer.cs">
+      <DependentUpon>BitStructure.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\ibool.fr.Designer.cs">
+      <DependentUpon>ibool.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\ibool.en.Designer.cs">
+      <DependentUpon>ibool.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\ibool.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ibool.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Range.fr.Designer.cs">
+      <DependentUpon>Range.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Range.en.Designer.cs">
+      <DependentUpon>Range.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Range.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Range.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Stack.fr.Designer.cs">
+      <DependentUpon>Stack.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Stack.en.Designer.cs">
+      <DependentUpon>Stack.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Math.fr.Designer.cs">
+      <DependentUpon>Math.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Math.en.Designer.cs">
+      <DependentUpon>Math.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Math.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Math.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\Stack.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stack.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Classes\WinAPI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WinAPI.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Structures\BitStructure.cs" />
+    <Compile Include="Sources\Structures\VersionedBuffer.cs" />
+    <Compile Include="Sources\Types\Array.cs" />
+    <Compile Include="Sources\Types\String.cs" />
+    <Compile Include="Sources\Windows\Reflection.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Callbacks.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\A\AreFileApisANSI.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\C\CancelIo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\C\CancelIoEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\C\CancelSynchronousIo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\C\CheckNameLegalDOS8Dot3.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\C\CloseEncryptedFileRaw.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\C\CopyFile.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\C\CopyFileEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\Kernel32.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\A\ActivateKeyboardLayout.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CharLowerBuff.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CharNext.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CharPrev.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CharToOem.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CharToOemBuff.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CharUpper.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CharLower.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CharUpperBuff.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetActiveWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetAsyncKeyState.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetFocus.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetKBCodePage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetKeyboardLayout.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetKeyboardLayoutList.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetKeyboardLayoutName.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetKeyboardState.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetKeyboardType.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetKeyNameText.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetKeyState.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsCharAlpha.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsCharAlphaNumeric.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsCharLower.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsCharUpper.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\K\keybd_event.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\L\LoadKeyboardLayout.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\O\OemKeyScan.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\O\OemToChar.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\O\OemToCharBuff.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SendInput.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetFocus.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetKeyboardState.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\T\ToUnicodeEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\T\ToAscii.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\T\ToAsciiEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\T\ToUnicode.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\User32.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\U\UnloadKeyboardLayout.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\V\VkKeyScanEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\V\VkKeyScan.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\A\AC_SRC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\A\AW.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\CALLBACK_REASON.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\CB.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\CBN.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\CCHILDREN_TITLEBAR.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\COLOR.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\COPY_FILE.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\CS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\CURSOR.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\CWP.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\D\DBT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\D\DCX.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\D\DDL.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\D\DI.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\D\DLGC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\D\DT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\E\ERROR.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\E\EWX.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FACCEL.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FACILITY.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FLASHW.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\G\GIDC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\G\IMEGCS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\G\GF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\G\GID.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\G\GMEM.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\G\GWL.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\G\GCL.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HCBT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HEAP.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HELPINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HKL.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HOTKEYF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HSHELL.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HWND.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\ICON.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\ID.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\IMC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\IMR.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\INPUT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\INPUTLANGCHANGE.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\ISC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\ISMEX.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\IDC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\I\IDI.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\K\KEYEVENTF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\K\KF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\CBRESULT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\K\KLF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\L\LB.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\L\LBN.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\L\LBRESULT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\L\LMEM.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\L\LSFW.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\L\LWA.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MA.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MB.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MDITILE.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MNC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MND.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MNGO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MNGOF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MOD.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MOUSEEVENTF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MSGF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\N\NF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\N\NFR.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\P\PM.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\P\PRF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\P\PROGRESS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\P\PW.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\Q\QS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\R\RIM.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SHTDN.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SIZE.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\STATE_SYSTEM.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SLE.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SWP.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\U\ULW.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WDA.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WH.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WMSZ.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WPF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WTS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Defines.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WVR.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\A\AllowSetForegroundWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\A\AnimateWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\A\AnyPopup.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\A\AttachThreadInput.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\B\BeginDeferWindowPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\B\BringWindowToTop.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CallWindowProc.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\ChildWindowFromPoint.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\ChildWindowFromPointEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\ClientToScreen.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\ClipCursor.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CloseWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CopyAcceleratorTable.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CopyRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CreateAcceleratorTable.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CreateCaret.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CreateWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\C\CreateWindowEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DeferWindowPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DefWindowProc.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DestroyAcceleratorTable.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DestroyCaret.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DestroyWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DisableProcessWindowsGhosting.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DispatchMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DrawFocusRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DrawIcon.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DrawIconEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DrawText.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\D\DrawTextEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\E\EnumPropsEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\E\EnumWindowsEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\E\EnableWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\E\EndDeferWindowPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\E\EnumProps.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\E\EnumWindows.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\E\EqualRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\E\ExitWindows.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\E\ExitWindowsEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\F\FillRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\F\FlashWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\F\FlashWindowEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\F\FrameRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetCaretBlinkTime.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetCaretPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetClipCursor.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetCursor.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetCursorPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetPhysicalCursorPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetSysColor.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetSysColorBrush.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetWindowRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetClientRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetDC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetDCEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetForegroundWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GetProcessHeap.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GetProcessHeaps.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetProp.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetWindowDC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetWindowText.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetWindowTextLength.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalMemoryStatusEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetClassInfoEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetLayeredWindowAttributes.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetMessageExtraInfo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetMessagePos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetMessageTime.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetTitleBarInfoEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetTitleBarInfo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetWindowDisplayAffinity.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetWindowInfo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetCursorInfo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetComboBoxInfo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetClassName.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetDoubleClickTime.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetLastError.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetSystemMetrics.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetWindowLong.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetClassInfo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\G\GetWindowPlacement.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalAlloc.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalDiscard.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalFlags.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalFree.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalHandle.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalLock.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalMemoryStatus.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalReAlloc.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalSize.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\G\GlobalUnlock.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapAlloc.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapCompact.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapCreate.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapDestroy.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapFree.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapLock.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapReAlloc.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapSize.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapUnlock.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\H\HeapValidate.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\H\HideCaret.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\InflateRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IntersectRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\InvertRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsIconic.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsRectEmpty.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsWindowEnabled.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\InSendMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\InSendMessageEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsChild.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsHungAppWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsMenu.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsWindowUnicode.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsWindowVisible.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsWow64Message.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\I\IsZoomed.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\K\KillTimer.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\L\LoadAccelerators.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\L\LocalAlloc.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\L\LocalDiscard.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\L\LocalFlags.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\L\LocalFree.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\L\LocalHandle.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\L\LocalLock.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\L\LocalReAlloc.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\L\LocalSize.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\Kernel32\L\LocalUnlock.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\L\LockSetForegroundWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\L\LogicalToPhysicalPoint.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\M\MessageBeep.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\M\MessageBox.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\M\MessageBoxEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\M\MessageBoxIndirect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\M\MoveWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\O\OffsetRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\O\OpenIcon.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\P\PaintDesktop.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\P\PeekMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\P\PhysicalToLogicalPoint.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\P\PostQuitMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\P\PrintWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\P\PtInRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\R\RegisterClassEx.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\R\RegisterClass.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\R\RegisterWindowMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\R\ReleaseDC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\R\RemoveProp.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\R\ReplyMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\ScreenToClient.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SendMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetActiveWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetCaretBlinkTime.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetCaretPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetCursor.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetCursorPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetDoubleClickTime.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetForegroundWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetLastError.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetLayeredWindowAttributes.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetMessageExtraInfo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetMessageQueue.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetPhysicalCursorPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetProp.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetRectEmpty.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetTimer.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetWindowDisplayAffinity.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetWindowPlacement.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetWindowPos.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SetWindowText.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\ShowCaret.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\ShowCursor.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\ShowOwnedPopups.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\ShowWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\ShowWindowAsync.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SubtractRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SwapMouseButton.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SwitchToThisWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\S\SystemParametersInfo.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\T\TranslateAccelerator.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\T\TranslateMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\U\UnionRect.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\U\UnregisterClass.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\U\UpdateLayeredWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\U\UpdateWindow.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\W\WaitForInputIdle.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\W\WaitMessage.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\W\WindowFromDC.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\W\WindowFromPhysicalPoint.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\User32\W\WindowFromPoint.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\X\XBUTTON.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Messages\WM_KEYMSG_LPARAM.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Messages\LB_ITEMFROMPOINT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Messages\WM_CHARTOITEM.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Messages\WM_CHANGEUISTATE.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Messages\WM_ACTIVATE.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Messages\WM_APPCOMMAND.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\Enums.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\A\APPCOMMAND.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\A\ATF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\C\CF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\A\ARW.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\N\NID.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SM.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\T\TKF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SKF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SSF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MKF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FONTCLIP.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FONTPITCH.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FONTPRECIS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FONTCHARSET.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FONTQUALITY.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FW.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FAPPCOMMAND.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FE.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\F\FKF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\H\HCF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\L\LANG.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\M\MK.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\O\ODA.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\O\ODS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\O\ODT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\R\RT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SB.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SORT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SPI.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SPIF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SSGF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SSTF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SSWF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SUBLANG.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\S\SW.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\U\UISF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\U\UIS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\V\VK.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WA.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WM.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Enums\W\WS_EX.cs" />
+    <Compile Include="Sources\Windows\WinAPI\DLL\DLL.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Messages\WM_COMMAND.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Messages\WM_CONTEXTMENU.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\H\HARDWAREINPUT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\I\INPUT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\K\KEYBDINPUT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MOUSEINPUT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\O\OVERLAPPED.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\Structures.cs" />
+    <Compile Include="Sources\Windows\Support.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Forms\ApplicationSettingsForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApplicationSettingsForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Localization\Forms\ApplicationSettingsForm.en.Designer.cs">
+      <DependentUpon>ApplicationSettingsForm.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Localization\Forms\ApplicationSettingsForm.fr.Designer.cs">
+      <DependentUpon>ApplicationSettingsForm.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sources\Core\Exception.cs" />
+    <Compile Include="Sources\Core\Localizer.cs" />
+    <Compile Include="Sources\Core\Log.cs" />
+    <Compile Include="Sources\Core\Assembly.cs" />
+    <Compile Include="Sources\Core\AsynchronousFormThread.cs" />
+    <Compile Include="Sources\Windows\WinAPI.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\A\ACCEL.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\A\ACCESSTIMEOUT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\A\ANIMATIONINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\A\AUDIODESCRIPTION.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\B\BLENDFUNCTION.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\CLIENTCREATESTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\COLORREF.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\COMPAREITEMSTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\COMBOBOXINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\CBT_CREATEWND.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\CBTACTIVATESTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\CWPRETSTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\CURSORINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\CREATESTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\COPYDATASTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\C\CWPSTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\D\DELETEITEMSTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\D\DRAWITEMSTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\D\DRAWTEXTPARAMS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\E\EVENTMSG.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\F\FLASHWINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\G\GESTUREINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\G\GESTURENOTIFYSTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\H\HELPINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MDINEXTMENU.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MEASUREITEMSTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MEMORYSTATUS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MEMORYSTATUSEX.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MENUGETOBJECTINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MINMAXINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MDICREATESTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MSG.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MSGBOXPARAMS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\N\NCCALCSIZE_PARAMS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\N\NMHDR.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\P\PAINTSTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\P\PBT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\P\POINTS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\P\PWR.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\S\SHELLHOOKINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\S\STYLESTRUCT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\T\TITLEBARINFOEX.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\T\TOGGLEKEYS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\S\SOUNDSENTRY.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\N\NONCLIENTMETRICS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MOUSEKEYS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\M\MINIMIZEDMETRICS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\I\ICONMETRICS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\H\HIGHCONTRAST.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\F\FILTERKEYS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\F\FILETIME.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\L\LOGFONT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\P\POINT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\R\RECT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\S\SIZE.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Macros.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\S\STICKYKEYS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\T\TITLEBARINFO.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\W\WINDOWPLACEMENT.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\W\WINDOWPOS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\W\WNDCLASSEX.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\W\WNDCLASS.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\W\WTSSESSION_NOTIFICATION.cs" />
+    <Compile Include="Sources\Windows\WinAPI\Structures\W\WINDOWINFO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Localization\Classes\CircularBuffer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CircularBuffer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\CircularBuffer.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CircularBuffer.en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\CircularBuffer.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CircularBuffer.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Hotkey.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Hotkey.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Hotkey.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Hotkey.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Hotkey.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Hotkey.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Set.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Set.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Set.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Set.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Set.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Set.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Exceptions.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exceptions.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Exceptions.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exceptions.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Exceptions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exceptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Forms\HistoryForm.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HistoryForm.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Forms\HistoryForm.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HistoryForm.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Forms\HistoryForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HistoryForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sources\Controls\ConsoleTextBox.resx">
+      <DependentUpon>ConsoleTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sources\Forms\ApplicationSettingsForm.resx">
+      <DependentUpon>ApplicationSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sources\Forms\AsynchronousForm.resx">
+      <DependentUpon>AsynchronousForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sources\Forms\Form.resx">
+      <DependentUpon>Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sources\Forms\ShellForm.resx">
+      <DependentUpon>ShellForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sources\Forms\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\BitStructure.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BitStructure.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\BitStructure.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BitStructure.en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\BitStructure.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BitStructure.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Enumerator.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Enumerator.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Enumerator.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Enumerator.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Enumerator.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Enumerator.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\ibool.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ibool.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\ibool.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ibool.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\ibool.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ibool.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Range.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Range.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Range.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Range.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Range.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Range.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Stack.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Stack.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Stack.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Stack.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Stack.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Stack.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\WinAPI.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WinAPI.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Forms\ApplicationSettingsForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationSettingsForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Forms\ApplicationSettingsForm.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationSettingsForm.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Forms\ApplicationSettingsForm.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationSettingsForm.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Math.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Math.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Math.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Math.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Localization\Classes\Math.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Math.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sources\Forms\SubForms\HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Math.Expression.regex" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Graphics\NotifyIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graphics\CommandShell.bmp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

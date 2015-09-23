@@ -1,0 +1,40 @@
+/**************************************************************************************************************
+
+    NAME
+        WinAPI/Functions/X/XXX.cs
+
+    DESCRIPTION
+        XXX() Windows function.
+
+    AUTHOR
+        Christian Vigh, 10/2012.
+
+    HISTORY
+    [Version : 1.0]    [Date : 2012/10/17]     [Author : CV]
+        Initial version.
+
+ **************************************************************************************************************/
+
+using	System  ;
+using	System. Runtime. InteropServices  ;
+using   System. Text ;
+
+using	Thrak. WinAPI ;
+using	Thrak. WinAPI. Enums ;
+using	Thrak. WinAPI. Structures ;
+
+
+namespace Thrak. WinAPI
+   {
+	public static partial class Functions
+	   {
+		# region Generic version.
+		[DllImport ( "User32.dll", SetLastError = true, CharSet = CharSet. Auto )]
+		[return: MarshalAs ( UnmanagedType. Bool )]
+		public static extern bool 	XXX ( ) ;
+
+		[DllImport ( "Kernel32.dll", SetLastError = true, CharSet = CharSet. Auto )]
+		public static extern IntPtr 	XXX ( ) ;
+		# endregion
+	    }
+    }

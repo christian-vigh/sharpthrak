@@ -1,0 +1,46 @@
+/**************************************************************************************************************
+
+    NAME
+        WinAPI/Structures/X/XXX.cs
+
+    DESCRIPTION
+        XXX structure.
+
+    AUTHOR
+        Christian Vigh, 10/2012.
+
+    HISTORY
+    [Version : 1.0]    [Date : 2012/10/17]     [Author : CV]
+        Initial version.
+
+ **************************************************************************************************************/
+
+using	System  ;
+using	System. Runtime. InteropServices  ;
+using   System. Text ;
+
+using	Thrak. WinAPI ;
+using	Thrak. WinAPI. Enums ;
+
+
+namespace Thrak. WinAPI. Structures
+   {
+	/// <summary>
+	/// </summary>
+ 	[StructLayout ( LayoutKind. Sequential ) ]
+	public struct  XXX
+	   {
+
+		/// <summary>
+		/// Converts a WinAPI.Structure object into an initialized XXX structure. This is only syntactical sugar to zero out a structure
+		/// using the Structure.Empty property.
+		/// </summary>
+		/// <returns>An initialized XXX structure.</returns>
+		public static implicit operator  XXX ( Thrak. WinAPI. Structures. Structure  value )
+		   {
+			XXX		Result ;
+
+			return ( Result ) ;
+		    }
+	    }
+    }

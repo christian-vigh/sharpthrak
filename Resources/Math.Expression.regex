@@ -1,0 +1,67 @@
+﻿# Contains the regex used to evaluate an expression.
+# An expression is a list of the following elements :
+
+   # An integer value specifying a base (integer values without the base indicator
+   # are tokenized as floats)
+   (?<integer>
+      (?<hex>  0 [xX] [0-9a-fA-F]+)  |
+      (?<oct>  0 [oO] [0-7]+)        |
+      (?<bin>  0 [bB] [01]+)         |
+      (?<dec>  0 [dD] \d+ )
+    ) |
+
+   # A float value
+   (?<float>
+      ( ( \d+ [.] \d+ ) | ( \d+ [.]? ) | ( [.] \d+ ) ) ([eE] [+\-]? \d+)?
+    ) |
+
+   # A delimiter
+   (?<delimiter>
+      (?<comma>     \, ) |
+      (?<semicolon> \; )
+    ) |
+
+   # A bracket
+   (?<bracket>
+      (?<lparent>   \( ) |
+      (?<rparent>   \) ) |
+      (?<lbrace>    \{ ) |
+      (?<rbrace>    \} ) |
+      (?<lbracket>  \[ ) |
+      (?<rbracket>  \] )
+    ) |
+
+   # An operator
+   (?<operator> 
+        (?<opADD>	\+)    |
+        (?<opSUB>	\-)    |
+        (?<opMUL>	\*)    |
+        (?<opMOD>	\%)    |
+	(?<opIDIV>	\\)    |
+	(?<opDIV>	\/)    |
+	(?<opXOR>       \^)    |  
+	(?<opPOWER>	\*\*)  |
+        (?<opBNOT>	\~)    |
+	(?<opBAND>	\&)    |
+	(?<opBOR>	\|)    |
+	(?<opNOT>       \!)    |
+	(?<opAND>	\&\&)  |
+	(?<opOR>	\|\|)  |
+	(?<opEQ>	\=\=)  |
+	(?<opNE>	\!\=)  |
+	(?<opLT>	\<)    |
+	(?<opLE>	\<\=)  |
+	(?<opGT>	\>)    |
+	(?<opGE>	\>\=)  |
+	(?<opASSIGN>	\=)    |
+	(?<opALT>	\?)    |
+	(?<opELSE>	\:)
+       ) |
+
+   # A variable name
+   ( \$ (?<variable>  \w+) ) |
+
+   # A name
+   (?<name> \w+)
+
+     
