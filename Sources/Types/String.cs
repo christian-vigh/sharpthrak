@@ -765,60 +765,60 @@ namespace Thrak. Types
 
 		# region ExpandTabs method
 		/// <summary>
-		/// Expand tabs in a string.
+		/// Extension to the string object : expands tabs within a string.
 		/// </summary>
-		/// <param name="tabwidth">Tabulation width. The default tab width is 8 characters.</param>
-		/// <param name="initial_position">Initial starting position.</param>
-		/// <returns>The input string, with tabs expanded.</returns>
-		public static String  ExpandTabs ( this String  value, int  tabwidth = 8, int  initial_position = 0 )
+		/// <param name="text">String object</param>
+		/// <param name="tabsize">Number of spaces represented by a tab.</param>
+		/// <param name="stop_at_first_nonspace">When true, expansion stops at the first nonspace character.</param>
+		/// <returns>The expanded string.</returns>
+		public static string  ExpandTabs ( this string		text, 
+						   int			tabsize			=  8, 
+						   bool			stop_at_first_nonspace	=  false )
 		   {
-			StringBuilder		Result		=  new StringBuilder ( ) ;
-			int			index		=  initial_position % tabwidth ;
-			int			step ;
+			StringBuilder	result		=  new StringBuilder ( ) ;
+			int		column		=  0,
+					index		=  0 ;
 
-
-			// Loop through all characters of current string
-			for  ( int  i = 0 ; i < value. Length ; i ++ )
+			foreach  ( Char  ch  in  text )
 			   {
-				Char		ch	=  value [i] ;
-
-				// Process current character
-				switch  ( ch )
+				switch ( ch )
 				   {
-					// Tab character -
-					//	Replace this character with the number of spaces needed to go to the next tab stop.
 					case	'\t' :
-						step	 =  tabwidth - ( index % tabwidth ) ;
-						Result. Append ( new String ( ' ', step ) ) ;
-						index	+=  step ;
+						do
+						   {
+							result. Append ( ' ' ) ;
+							column ++ ;
+						    }  while ( ( column & ( tabsize - 1 ) )  !=  0 ) ;
 						break ;
 
-					// Carriage return -
-					//	Next tab starts at position #0. 
-					case	'\r' :
-						Result. Append ( ch ) ;
-						index = 0 ;
-						break ;
-
-					// Line feed -
-					//	Tab position remains unchanged. Only the line number changes.
 					case	'\n' :
-						Result. Append ( ch ) ;
-						Result. Append ( new String ( ' ', index ) ) ;
-						index ++ ;
+					case	'\r' :
+						column	=  0 ;
+						break ;
+					
+					case	' ' :
+						result. Append ( ' ' ) ;
+						column ++ ;
 						break ;
 
-					// Default case -
-					//	Simply add the character to the result.
 					default :
-						Result. Append ( ch ) ;
-						index ++ ;
+						if  ( stop_at_first_nonspace )
+						   {
+							result. Append ( text. Substring ( index ) ) ;
+							return ( result. ToString ( ) ) ;
+						    }
+						else
+						   {
+							result. Append ( ch ) ;
+							column ++ ;
+						     }
 						break ;
 				    }
+
+				index ++ ;
 			    }
 
-			// All done, return
-			return ( Result. ToString ( ) ) ;
+			return ( result. ToString ( ) ) ;
 		    }
 
 		# endregion
@@ -937,6 +937,42 @@ namespace Thrak. Types
 		   { return ( value. Quote ( delimiter. ToString ( ), escape.ToString ( ) ) ) ; }
 
 		#  endregion
+
+		# region  Repeat method
+		/// <summary>
+		/// Repeats a string by the specified number of times.
+		/// </summary>
+		/// <param name="count">Repeat count.</param>
+		/// <returns>The string instance repeated 'count' times.</returns>
+		public static String  Repeat ( this String  value, int  count )
+		   {
+			if  ( count  <  0 )
+				throw new IndexOutOfRangeException ( ) ;
+			else if  ( count  ==  0 )
+				return ( "" ) ;
+			
+			StringBuilder		result	=  new StringBuilder ( ) ;
+
+			while  ( count --  >=  0 )
+				result. Append ( value ) ;
+
+			return ( result. ToString ( ) ) ;
+		    }
+
+
+		/// <summary>
+		/// Repeats a character by the specified number of times.
+		/// </summary>
+		/// <param name="count">Repeat count.</param>
+		/// <returns>The character instance repeated 'count' times.</returns>
+		public static String  Repeat ( this Char  value, int  count )
+		   {
+			if  ( count  <  0 )
+				throw new IndexOutOfRangeException ( ) ;
+
+			return ( "". PadLeft ( count, value ) ) ;
+		    }
+		# endregion
 
 		# region Unaccentuate method
 		// Maps accentuated letters with unaccentuated ones.
