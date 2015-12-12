@@ -96,6 +96,12 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -854,6 +860,8 @@
     <Compile Include="Sources\Windows\WinAPI\Structures\W\WNDCLASS.cs" />
     <Compile Include="Sources\Windows\WinAPI\Structures\W\WTSSESSION_NOTIFICATION.cs" />
     <Compile Include="Sources\Windows\WinAPI\Structures\W\WINDOWINFO.cs" />
+    <Compile Include="Sources\Xml\XmlNode.cs" />
+    <Compile Include="Sources\Xml\XmlValidatedDocument.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Localization\Classes\CircularBuffer.resx">
@@ -1066,13 +1074,14 @@
     <EmbeddedResource Include="Resources\Graphics\NotifyIcon.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Key.snk" />
     <None Include="Resources\Graphics\CommandShell.bmp" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UseGlobalSettings="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
