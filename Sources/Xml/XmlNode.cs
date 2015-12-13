@@ -25,6 +25,7 @@ using  System. Xml ;
 using  System. Xml. Schema ;
 using  System. Xml. XPath ;
 
+using  Thrak. Types ;
 
 namespace Thrak. Xml
    {
@@ -32,7 +33,7 @@ namespace Thrak. Xml
 	/// <summary>
 	/// Provides extension functions for the XmlNode class.
 	/// </summary>
-	static class	XmlNodeExtensions
+	static public class	XmlNodeExtensions
 	   {
 		# region	Methods for partial conversions to string
 		/// <summary>
@@ -138,7 +139,7 @@ namespace Thrak. Xml
 		   {
 			if  ( node. Attributes. Count  !=  0 )
 		 	   {
-				if  ( node. Attributes  [ name ]. Value  !=  null )
+				if  ( node. Attributes  [ name ]  !=  null )
 					return ( node. Attributes  [ name ]. Value. Trim ( ) ) ;
 				else
 					return ( default_value ) ;
@@ -155,8 +156,10 @@ namespace Thrak. Xml
 		public static string  GetOpeningTag ( this XmlNode  node, bool  closed = false )
 		   {
 			string		end	=  ( closed ) ?  "/>" : ">" ;
+			string		attr	=  GetAttributesAsString ( node ) ;
+			string		space	=  String. IsNullOrEmpty ( attr ) ?  String. Empty : " " ;
 
-			return ( "<" + node. Name + GetAttributesAsString ( node ) + end ) ;
+			return ( "<" + node. Name + space + attr + end ) ;
 		    }
 
 
@@ -183,7 +186,7 @@ namespace Thrak. Xml
 		/// only the enclosed contents are returned (ie, the line containing "my tag contents").
 		/// </summary>
 		/// <returns>The xml node text.</returns>
-		public static string  GetNodeText ( this XmlNode  node )
+		public static string  GetText ( this XmlNode  node )
 		   {
 			string		text		=  node. InnerText ;
 			int		start		=  0,
@@ -219,6 +222,68 @@ namespace Thrak. Xml
 			else
 				return ( text. Substring ( start, end - start + 1 ) ) ;
 		    }
+
+
+		/// <summary>
+		/// This method is aimed at retrieving a node text contents that might be aligned to respect 
+		/// global xml file indentation (for pretty-printing purposes).
+		/// It returns the set of text lines without the initial indentation spaces. 
+		/// </summary>
+		/// <returns>An array of lines corresponding to the node's contents.</returns>
+		/***
+			The basic idea is to preserve node text alignment ; consider the following example :
+		 
+ 			<sometag ...>
+ 				*---------------------------------
+ 		
+ 					some text
+ 			
+ 				 ---------------------------------*
+ 			</sometag>
+ 	
+			Whatever the initial indentations, the return value will be :
+ 				"*---------------------------------"
+ 				""
+ 				"	some text"
+ 				""
+ 				" ---------------------------------*"
+				
+ 			This is done by expanding tabs at the beginning of each line and finding the position of the first 
+ 			non-space character. The smallest position found will serve as a start position for all text contents.
+ 
+ 			Note also that newlines after the opening tag and after the last line of contents (before closing tag)
+ 			will be removed. However, you can still specify empty lines anywhere within the text contents : they 
+ 			will be preserved. This allows you to have a pretty-well formatted xml file without having the burden of
+			preserving alignments.
+		 ***/
+		public static string []  GetAlignedTextLines ( this XmlNode  node )
+		   {
+			String		text		=  GetText ( node ) ;
+
+			text				=   text. Replace ( "\r", "" ) ;
+
+			string [] lines			=  text. Split ( new char [] { '\n' } ) ;
+			int	min_start_column	=  int. MaxValue ;
+
+			for  ( int  i = 0 ; i  < lines. Length ; i ++ )
+			   { 
+				lines [i]	=  lines [i]. ExpandTabs ( 8, true ) ;
+
+				int	index		=  Array. FindIndex ( lines [i]. ToCharArray ( ), 
+									ch => ! char. IsWhiteSpace ( ch ) ) ;
+
+				if  ( index  >=  0  &&  index  <  min_start_column )
+					min_start_column	=  index ;
+			    }
+
+			for  ( int  i = 0 ; i  <  lines. Length ; i ++ )
+			   {
+				if  ( lines [i]. Length  >  min_start_column )
+					lines [i]	=  lines [i]. Substring ( min_start_column ) ;
+			    }
+
+			return ( lines ) ;
+		    }
 		# endregion
 
 		# region		Misc methods
@@ -240,6 +305,17 @@ namespace Thrak. Xml
 			nesting_level -- ;	// Count one less, since the top level node is the XmlDocument itself
 
 			return ( nesting_level ) ;
+		    }
+
+
+		/// <summary>
+		/// Sets the specified attribute value.
+		/// </summary>
+		/// <param name="name">Attribute name.</param>
+		/// <param name="value">New attribute value.</param>
+		public static void	SetAttributeValue ( this XmlNode  node, string  name, string  value )
+		   {
+			( ( XmlElement ) node ). SetAttributeValue ( name, value ) ;
 		    }
 		# endregion
 
