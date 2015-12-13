@@ -938,6 +938,21 @@ namespace Thrak. Types
 
 		#  endregion
 
+		# region  UppercaseFirst method
+		/// <summary>
+		/// Returns the supplied value with the first character converted to uppercase and the remaining characters
+		/// converted to lowercase.
+		/// </summary>
+		/// <param name="value">Value to be converted.</param>
+		public static String  UppercaseFirst ( this string  value )
+		   {
+			if  ( String. IsNullOrEmpty ( value ) )
+				return ( String. Empty ) ;
+			else
+				return ( value [0]. ToUpper ( ) + value.Substring ( 1 ). ToLower ( ) ) ;
+		    }
+		# endregion
+
 		# region  Repeat method
 		/// <summary>
 		/// Repeats a string by the specified number of times.
