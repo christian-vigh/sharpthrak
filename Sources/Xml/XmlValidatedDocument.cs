@@ -207,7 +207,7 @@ namespace Thrak. Xml
 		/// <param name="severity">Error severity</param>
 		/// <param name="message">Message</param>
 		/// <param name="line">Source line</param>
-		protected void  AddValidationMessage ( XmlParseErrorSeverity  severity, string  message, int  line = 0 )
+		public void  AddValidationMessage ( XmlParseErrorSeverity  severity, string  message, int  line = 0 )
 		   {
 			XmlParseError	pe	=  new XmlParseError ( ) ;
 
