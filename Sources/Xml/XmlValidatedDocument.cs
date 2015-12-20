@@ -104,7 +104,7 @@ namespace Thrak. Xml
 		public XmlValidatedDocument ( string		xml_data, 
 					      string		xsd_data	=  null ) : base ( )
 		    {
-			// Initilizations
+			// Initializations
 			IsValid			=  true ;			// Consider that by default the document is valid until some crap is found
 			ValidationMessages	=  new XmlParseErrors ( ) ;
 			XmlData			=  xml_data ;			// Remember supplied parameters
