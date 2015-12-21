@@ -371,6 +371,7 @@
       <DependentUpon>WinAPI.resx</DependentUpon>
     </Compile>
     <Compile Include="Sources\Structures\BitStructure.cs" />
+    <Compile Include="Sources\Structures\VariableStore.cs" />
     <Compile Include="Sources\Structures\VersionedBuffer.cs" />
     <Compile Include="Sources\Types\Array.cs" />
     <Compile Include="Sources\Types\String.cs" />
@@ -1081,7 +1082,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UseGlobalSettings="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" />
+      <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

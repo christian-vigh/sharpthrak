@@ -142,10 +142,10 @@ namespace Thrak. Xml
 				if  ( node. Attributes  [ name ]  !=  null )
 					return ( node. Attributes  [ name ]. Value. Trim ( ) ) ;
 				else
-					return ( default_value ) ;
+					return ( default_value. Trim ( ) ) ;
 			    }
 			else
-				return ( default_value ) ;
+				return ( default_value. Trim ( ) ) ;
 		    }
 
 
