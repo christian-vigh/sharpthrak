@@ -623,11 +623,19 @@ namespace Thrak. Types
 
 		# region Character extension methods
 		/// <summary>
+		/// Returns the ordinal value of a character.
+		/// </summary>
+		/// <returns>The ordinal (numeric) value of the specified character.</returns>
+		public static int  GetNumericValue ( this Char  ch )
+		   { return ( ( int ) Char. GetNumericValue ( ch ) ) ; }
+
+
+		/// <summary>
 		/// Converts a character to lowercase.
 		/// </summary>
 		/// <returns>The supplied character, converted to lowercase.</returns>
 		public static Char  ToLower ( this Char  ch )
-		   { return ( ch. ToString ( ). ToLower ( ) [0] ) ; }
+		   { return ( Char. ToLower ( ch ) ) ; }
 
 
 		/// <summary>
@@ -635,7 +643,7 @@ namespace Thrak. Types
 		/// </summary>
 		/// <returns>The supplied character, converted to uppercase.</returns>
 		public static Char  ToUpper ( this Char  ch )
-		   { return ( ch. ToString ( ). ToUpper ( ) [0] ) ; }
+		   { return ( Char. ToUpper ( ch ) ) ; }
 		# endregion
 
 
