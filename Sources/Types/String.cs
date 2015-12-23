@@ -623,7 +623,7 @@ namespace Thrak. Types
 
 		# region Character extension methods
 		/// <summary>
-		/// Returns the ordinal value of a character.
+		/// Returns the ordinal value of a character representing a digit.
 		/// </summary>
 		/// <returns>The ordinal (numeric) value of the specified character.</returns>
 		public static int  GetNumericValue ( this Char  ch )
