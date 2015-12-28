@@ -206,6 +206,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HistoryForm.resx</DependentUpon>
     </Compile>
+    <Compile Include="Sources\Controls\ControlExtensions.cs" />
     <Compile Include="Sources\Processors\CommandLine\CommandLine.cs" />
     <Compile Include="Sources\Controls\ConsoleTextBox.cs">
       <SubType>Component</SubType>
@@ -1082,7 +1083,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_UseGlobalSettings="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UseGlobalSettings="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
