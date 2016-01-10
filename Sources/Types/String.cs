@@ -201,6 +201,19 @@ namespace Thrak. Types
 
 	# endregion
 
+	# region StringAlignment flags
+	/// <summary>
+	/// String alignment options.
+	/// </summary>
+	public enum  StringAlignmentOption
+	   {
+		Left		=  0,
+		Right		=  1,
+		Center		=  2,
+		Justify		=  3 
+	    }
+	# endregion
+
 	# endregion
 
 
@@ -768,6 +781,55 @@ namespace Thrak. Types
 
 		# endregion
 
+		# region Formatting methods
+		/// <summary>
+		/// Aligns (and pads) a string to the specified width.
+		/// </summary>
+		/// <param name="width">Width of the resulting string.</param>
+		/// <param name="align">
+		/// Alignment of the value on "width" characters : Left, Right or Center (the Justify option is
+		/// handled as Center).
+		/// </param>
+		/// <param name="truncate">Result will be truncated if the input string is greater than "width" characters</param>
+		/// <returns>The aligned and padded string</returns>
+		public static string  Align ( this String		value, 
+					      int			width, 
+					      StringAlignmentOption	align	=  StringAlignmentOption. Left, 
+					      bool			truncate = false )
+		   {
+			if  ( width  <  0 )
+				throw new ArgumentOutOfRangeException ( ) ;
+			else if  ( width  ==  0 )
+				return ( value ) ;
+
+			int		value_width	=  value. Length ;
+			int		delta		=  width - value_width ;
+
+			if  ( value_width  >  width )
+			   { 
+				return
+				   (
+					( truncate ) ? 
+						value. Substring ( 0, width ) :
+						value 
+				    ) ;	
+			    }
+
+			switch  ( align )
+			   {
+				case  StringAlignmentOption. Left :
+					return ( value + " ". Repeat ( delta ) ) ;
+
+				case  StringAlignmentOption. Right :
+					return ( " ". Repeat ( delta ) + value ) ;
+
+				default :
+					int	left_delta	=  delta / 2 ;
+
+					return ( " ". Repeat ( left_delta ) + value + " ". Repeat ( delta - left_delta ) ) ;
+			    }
+		    }
+		# endregion
 
 		# region String manipulation methods
 
@@ -1037,6 +1099,7 @@ namespace Thrak. Types
 		# endregion
 		
 		# endregion
+
 	    }
 	# endregion
     }
