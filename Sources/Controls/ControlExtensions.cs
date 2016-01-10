@@ -32,7 +32,7 @@ namespace Thrak. Forms
 
 
 		/// <summary>
-		/// Locks window update for the current control.
+		/// Locks window update for the specified control.
 		/// </summary>
 		/// <param name="lock_update">Indicates whether locking or unlocking should occur.</param>
 		public static void  LockWindowUpdate ( this Control  ctrl, bool  lock_update = true )
@@ -42,7 +42,6 @@ namespace Thrak. Forms
 			else
 				WinLockWindowUpdate ( IntPtr. Zero ) ;
 		    }
-
 
 		/// <summary>
 		/// Gets the DoubleBuffering property value of a control.
