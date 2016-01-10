@@ -103,6 +103,10 @@
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -207,6 +211,15 @@
       <DependentUpon>HistoryForm.resx</DependentUpon>
     </Compile>
     <Compile Include="Sources\Controls\ControlExtensions.cs" />
+    <Compile Include="Sources\DTE\EditPoint.cs" />
+    <Compile Include="Sources\DTE\TextSelection.cs" />
+    <Compile Include="Sources\Forms\InputBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sources\Forms\InputBoxForm.Designer.cs">
+      <DependentUpon>InputBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\Input\InputBox.cs" />
     <Compile Include="Sources\Processors\CommandLine\CommandLine.cs" />
     <Compile Include="Sources\Controls\ConsoleTextBox.cs">
       <SubType>Component</SubType>
@@ -252,6 +265,7 @@
     <Compile Include="Sources\Math\BigInteger\BigInteger.cs" />
     <Compile Include="Sources\Math\BigInteger\Constructors.cs" />
     <Compile Include="Sources\Math\BitTables.cs" />
+    <Compile Include="Sources\Processors\Parsing.cs" />
     <Compile Include="Sources\Structures\BitArray.cs" />
     <Compile Include="Sources\Interop\Vroom.cs" />
     <Compile Include="Sources\Forms\ApplicationSettingsForm.cs">
@@ -375,6 +389,7 @@
     <Compile Include="Sources\Structures\VariableStore.cs" />
     <Compile Include="Sources\Structures\VersionedBuffer.cs" />
     <Compile Include="Sources\Types\Array.cs" />
+    <Compile Include="Sources\Types\Dictionary.cs" />
     <Compile Include="Sources\Types\String.cs" />
     <Compile Include="Sources\Windows\Reflection.cs" />
     <Compile Include="Sources\Windows\WinAPI\Callbacks.cs" />
@@ -940,6 +955,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sources\Forms\Form.resx">
       <DependentUpon>Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sources\Forms\InputBoxForm.resx">
+      <DependentUpon>InputBoxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sources\Forms\ShellForm.resx">
       <DependentUpon>ShellForm.cs</DependentUpon>
