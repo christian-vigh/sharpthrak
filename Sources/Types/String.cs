@@ -1038,7 +1038,7 @@ namespace Thrak. Types
 			
 			StringBuilder		result	=  new StringBuilder ( ) ;
 
-			while  ( count --  >=  0 )
+			while  ( count --  >  0 )
 				result. Append ( value ) ;
 
 			return ( result. ToString ( ) ) ;
