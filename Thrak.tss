@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Controls\ControlExtensions.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Controls\HotkeyTextBox.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Controls\TextBox.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Forms\ApplicationSettingsForm.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Forms\ShellForm.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Graphics\GDI.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Interop\MSVCRT.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Interop\Vroom.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Structures\VariableStore.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Xml\XmlValidatedDocument.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Main.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Forms\Classes\History.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Windows\WinAPI\DLL\Kernel32\C\CancelIo.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Windows\WinAPI\DLL\Kernel32\L\LocalUnlock.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Windows\WinAPI\DLL\DLL.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Windows\WinAPI\DLL\User32\A\AttachThreadInput.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Windows\WinAPI\Callbacks.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Windows\WinAPI\Defines.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Windows\Support.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Controls\ConsoleTextBox.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Core\Measurement.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Core\AsynchronousFormThread.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Types\Array.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Visual Studio\Projects\Libraries\Thrak\Sources\Types\Dictionary.cs</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>
